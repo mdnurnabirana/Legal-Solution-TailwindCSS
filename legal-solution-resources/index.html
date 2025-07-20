@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Legal Solution</title>
 </head>
+
 <body>
-    
+    <header class="flex items-center justify-between max-w-[1170px] my-0 mx-auto h-[100px]">
+        <!-- Logo -->
+        <figure class="flex-shrink-0"> <!-- Wil Not Shrink to Flex Container-->
+            <img src="./images/logo2.png" alt="Website Logo" class="h-full object-contain">
+        </figure>
+
+        <!-- Navigation -->
+        <nav class="hidden md:block">
+            <ul class="flex items-center justify-between gap-x-8">
+                <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Home</a></li>
+                <li>
+                    <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
+                        Services <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
+                        Cases <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
+                        Blog <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
+                        Contact Us <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Button -->
+        <button
+            class="bg-[rgb(182,140,90)] text-white text-lg px-7 py-4 rounded-lg font-semibold font-poppins hidden md:block">
+            Free Consultation
+        </button>
+    </header>
+
+    <main class="max-w-[1170px] my-0 mx-auto">
+        <section class="bg-[linear-gradient(180deg,_rgba(17,17,17,1),_rgba(17,17,17,0)),url('./images/banner.png')] rounded-lg h-[550px] text-white flex flex-col justify-center">
+            <h1 class="text-[64px] font-poppins font-normal text-center w-1/2 my-0 mx-auto">We Provide Effective Legal Solutions</h1>
+            <p class="text-[rgb(231,231,231)] font-poppins font-normal text-center w-1/2 my-0 mx-auto" >There are many variations of
+                passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour.</p>
+            <!-- Search box -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-10 w-1/2 my-0 mx-auto" >
+                <input class="bg-white text-black px-4 py-3 rounded-lg w-full md:w-[400px] font-poppins" type="search"
+                    placeholder="Search your services" />
+                <button class="bg-[rgb(182,140,90)] text-white text-lg px-6 py-3 rounded-lg font-semibold font-poppins">
+                    Search
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <h1>HIII</h1>
+        </section>
+    </main>
 </body>
+
 </html>

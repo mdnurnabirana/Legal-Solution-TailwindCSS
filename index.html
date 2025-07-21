@@ -10,307 +10,429 @@
 </head>
 
 <body>
-    <header class="flex items-center justify-between max-w-[1170px] my-0 mx-auto h-[100px]">
+    <header class="flex items-center justify-between max-w-[1170px] my-0 mx-auto h-[100px] px-4 relative group">
         <!-- Logo -->
-        <figure class="flex-shrink-0"> <!-- Wil Not Shrink to Flex Container-->
-            <img src="./images/logo2.png" alt="Website Logo" class="h-full object-contain">
+        <figure class="flex-shrink-0">
+            <img src="./images/logo2.png" alt="Website Logo" class="h-full object-contain max-h-[60px] md:max-h-[80px]">
         </figure>
 
-        <!-- Navigation -->
+        <!-- Hover Button (acts like menu trigger) -->
+        <div class="block md:hidden relative">
+            <button class="text-[rgb(112,112,112)] text-3xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Dropdown shown on hover -->
+            <nav
+                class="absolute top-full right-0 w-[200px] bg-white rounded shadow-md mt-2 hidden group-hover:block z-50 transition-all duration-300">
+                <ul class="flex flex-col gap-y-3 p-4">
+                    <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Home</a></li>
+                    <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Services</a></li>
+                    <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Cases</a></li>
+                    <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Blog</a></li>
+                    <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Contact Us</a></li>
+                    <li>
+                        <button
+                            class="bg-[rgb(182,140,90)] text-white text-sm px-5 py-2 rounded-lg font-semibold w-full">
+                            Free Consultation
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Desktop Nav -->
         <nav class="hidden md:block">
             <ul class="flex items-center justify-between gap-x-8">
                 <li><a href="#" class="font-normal text-[rgb(112,112,112)]">Home</a></li>
                 <li>
                     <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
-                        Services <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                        Services <span class="text-xl">›</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
-                        Cases <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                        Cases <span class="text-xl">›</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
-                        Blog <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                        Blog <span class="text-xl">›</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center font-normal text-[rgb(112,112,112)] gap-x-3">
-                        Contact Us <span class="text-[rgb(112,112,112)] text-xl">›</span>
+                        Contact Us <span class="text-xl">›</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <!-- Button -->
+        <!-- Desktop Button -->
         <button
             class="bg-[rgb(182,140,90)] text-white text-lg px-7 py-4 rounded-lg font-semibold font-poppins hidden md:block">
             Free Consultation
         </button>
     </header>
 
+
+
     <main class="max-w-[1170px] my-0 mx-auto">
         <!-- Banner Section -->
         <section
-            class="bg-[linear-gradient(180deg,_rgba(17,17,17,1),_rgba(17,17,17,0)),url('./images/banner.png')] rounded-lg h-[550px] text-white flex flex-col justify-center">
-            <h1 class="text-[64px] font-poppins font-normal text-center w-1/2 my-0 mx-auto">We Provide Effective Legal
-                Solutions</h1>
-            <p class="text-[rgb(231,231,231)] font-poppins font-normal text-center w-1/2 my-0 mx-auto">There are many
-                variations of
-                passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour.</p>
+            class="bg-[linear-gradient(180deg,_rgba(17,17,17,1),_rgba(17,17,17,0)),url('./images/banner.png')] bg-cover bg-center rounded-lg h-[550px] text-white flex flex-col justify-center px-4">
+
+            <!-- Heading -->
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-poppins font-normal text-center max-w-[90%] md:max-w-[80%] lg:max-w-[60%] mx-auto">
+                We Provide Effective Legal Solutions
+            </h1>
+
+            <!-- Paragraph -->
+            <p
+                class="text-[rgb(231,231,231)] font-poppins font-normal text-center mt-4 text-base md:text-lg max-w-[90%] md:max-w-[80%] lg:max-w-[60%] mx-auto">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour.
+            </p>
+
             <!-- Search box -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-10 w-1/2 my-0 mx-auto">
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-4 mt-10 w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
                 <input class="bg-white text-black px-4 py-3 rounded-lg w-full md:w-[400px] font-poppins" type="search"
                     placeholder="Search your services" />
-                <button class="bg-[rgb(182,140,90)] text-white text-lg px-6 py-3 rounded-lg font-semibold font-poppins">
+                <button
+                    class="bg-[rgb(182,140,90)] text-white text-lg px-6 py-3 rounded-lg font-semibold font-poppins w-full md:w-auto">
                     Search
                 </button>
             </div>
         </section>
 
-        <!-- Legal Practice -->
-        <section class="mt-[120px]">
-            <!-- Title -->
-            <div class="w-1/2 mx-auto">
-                <h1 class="text-center font-normal text-3xl text-[rgb(65,64,64)]">The Legal Practice Area</h1>
-                <p class="text-center font-normal text-[rgb(65,64,64)] mt-5">There are many variations of passages of
-                    Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
-                </p>
-            </div>
-            <!-- Content -->
-            <div class="grid grid-cols-3 my-10">
-                <!-- Content Cards -->
-                <div class="text-center p-18 border-b border-[rgb(231,231,231)]">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/business.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Business Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-                <div
-                    class="text-center p-18 bg-gradient-to-b from-[rgb(243,243,243)] to-[rgba(243,243,243,0)] border-l border-b border-t border-r border-[rgb(231,231,231)]">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/criminal.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Criminal Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-                <div class="text-center p-18 border-b border-[rgb(231,231,231)]">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/child.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Child Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-                <div class="text-center p-18">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/education.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Education Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-                <div class="text-center p-18 border-l border-r border-[rgb(231,231,231)]">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/divorce.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Divorce Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-                <div class="text-center p-18">
-                    <img class="h-[72px] w-[72px] mx-auto" src="./images/tax.png" alt="business">
-                    <h2 class="text-[rgb(65,64,64)] text-3xl mt-7">Tax Law</h2>
-                    <p class="text-[rgb(65,64,64)] mt-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by injected humour.</p>
-                </div>
-            </div>
-        </section>
+
+       <!-- Legal Practice -->
+<section class="mt-[120px] px-4 max-w-[1170px] mx-auto">
+  <!-- Title -->
+  <div class="max-w-lg mx-auto">
+    <h1 class="text-center font-normal text-3xl text-[rgb(65,64,64)]">
+      The Legal Practice Area
+    </h1>
+    <p class="text-center font-normal text-[rgb(65,64,64)] mt-5">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+    </p>
+  </div>
+
+  <!-- Content -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+    <!-- Card 1 -->
+    <div class="text-center p-8 border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/business.png" alt="business" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Business Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="text-center p-8 bg-gradient-to-b from-[rgb(243,243,243)] to-[rgba(243,243,243,0)] border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/criminal.png" alt="criminal" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Criminal Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="text-center p-8 border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/child.png" alt="child" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Child Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="text-center p-8 border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/education.png" alt="education" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Education Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="text-center p-8 border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/divorce.png" alt="divorce" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Divorce Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="text-center p-8 border border-[rgb(231,231,231)] rounded-lg">
+      <img class="h-[72px] w-[72px] mx-auto" src="./images/tax.png" alt="tax" />
+      <h2 class="text-[rgb(65,64,64)] text-2xl md:text-3xl mt-7 font-semibold">Tax Law</h2>
+      <p class="text-[rgb(65,64,64)] mt-5 text-sm md:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
+  </div>
+</section>
+
 
         <!-- Client Review -->
-        <section class="mt-30 space-y-12">
-            <!-- Title (Full width) -->
-            <div class="px-[200px] text-center">
-                <h1 class="font-normal text-[40px] text-[rgb(65,64,64)]">What Our Client Say</h1>
-                <p class="font-normal text-[rgb(112,112,112)]">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in some form, by injected humour.
-                </p>
-            </div>
+<section class="mt-12 space-y-8 max-w-[1170px] mx-auto px-4">
+  <!-- Title -->
+  <div class="text-center max-w-xl mx-auto">
+    <h1 class="font-normal text-3xl md:text-4xl text-[rgb(65,64,64)] mb-3">
+      What Our Client Say
+    </h1>
+    <p class="font-normal text-[rgb(112,112,112)] text-base md:text-lg">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+    </p>
+  </div>
 
-            <!-- Review Section: 3 columns (15% - 70% - 15%) -->
-            <div
-                class="rounded-[8px] grid grid-cols-[10%_80%_10%] items-center bg-[linear-gradient(rgba(17,17,17,0.8),rgba(17,17,17,0)),url('./images/banner.png')]">
-                <!-- Left Arrow -->
-                <div class="text-center text-2xl cursor-pointer">
-                    <h1 class="text-white">&lt;</h1>
-                </div>
+  <!-- Review Section -->
+  <div
+    class="rounded-lg grid grid-cols-[10%_80%_10%] items-center bg-[linear-gradient(rgba(17,17,17,0.8),rgba(17,17,17,0)),url('./images/banner.png')] bg-cover bg-center"
+    style="height: 500px;">
 
-                <!-- Review Card -->
-                <div
-                    class="h-[500px] bg-cover bg-center text-white flex flex-col items-center justify-center gap-4 px-6 text-center">
-                    <img src="./images/education.png" alt="client photo"
-                        class="border-[3px] border-solid border-white rounded-full w-[70px] h-[70px] object-cover" />
-                    <h4 class="text-white">Md Nur</h4>
-                    <p class="text-sm italic">MERN Stack Learner</p>
-                    <p class="text-[rgb(243,243,243)]">
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                        Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-                        words, consectetur.
-                    </p>
-                </div>
+    <!-- Left Arrow -->
+    <button aria-label="Previous review"
+      class="text-center text-3xl cursor-pointer select-none text-white hover:text-[rgb(182,140,90)] transition-colors duration-300">
+      &lt;
+    </button>
 
-                <!-- Right Arrow -->
-                <div class="text-center text-2xl cursor-pointer">
-                    <h1 class="text-white">&gt;</h1>
-                </div>
-            </div>
-        </section>
+    <!-- Review Card -->
+    <div
+      class="flex flex-col items-center justify-center gap-4 px-6 text-center text-white max-w-[600px] mx-auto">
+      <img src="./images/education.png" alt="client photo"
+        class="border-4 border-white rounded-full w-[70px] h-[70px] object-cover" />
+      <h4 class="text-lg font-semibold">Md Nur</h4>
+      <p class="italic text-sm md:text-base">MERN Stack Learner</p>
+      <p class="text-[rgb(243,243,243)] text-sm md:text-base leading-relaxed">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+      </p>
+    </div>
+
+    <!-- Right Arrow -->
+    <button aria-label="Next review"
+      class="text-center text-3xl cursor-pointer select-none text-white hover:text-[rgb(182,140,90)] transition-colors duration-300">
+      &gt;
+    </button>
+  </div>
+</section>
+
 
         <!-- FAQ -->
-        <section class="mt-30 space-y-12">
-            <!-- Title -->
-            <div class="px-[228px]">
-                <h1 class="text-center text-[rgb(64,64,64)] text-[40px] mb-6">Frequently Asked Any Questions</h1>
-                <p class="text-center text-[rgb(112,112,112)]">There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some form, by injected humour.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-x-10">
-                <div>
-                    <div class="bg-[rgb(243,243,243)] rounded-lg mb-7 px-13 py-9">
-                        <h2 class="text-xl text-[rgb(65,64,64)]">1. Are application fee waivers available?</h2>
-                        <p class="text-[rgb(112,112,112)] mt-[10px]">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour, . </p>
-                    </div>
-                    <div class="bg-[rgb(243,243,243)] rounded-lg mb-7 px-13 py-9 flex justify-between">
-                        <h2 class="text-xl text-[rgb(65,64,64)]">2. Are application fee waivers available?</h2>
-                        <h2 class="text-xl text-[rgb(65,64,64)]">+</h2>
-                    </div>
-                    <div class="bg-[rgb(243,243,243)] rounded-lg mb-7 px-13 py-9 flex justify-between">
-                        <h2 class="text-xl text-[rgb(65,64,64)]">2. Are application fee waivers available?</h2>
-                        <h2 class="text-xl text-[rgb(65,64,64)]">+</h2>
-                    </div>
-                    <div class="bg-[rgb(243,243,243)] rounded-lg mb-7 px-13 py-9 flex justify-between">
-                        <h2 class="text-xl text-[rgb(65,64,64)]">2. Are application fee waivers available?</h2>
-                        <h2 class="text-xl text-[rgb(65,64,64)]">+</h2>
-                    </div>
-                </div>
-                <div>
-                    <img src="./images/faq.png" alt="FAQ">
-                </div>
-            </div>
-        </section>
+<section class="mt-12 space-y-8 max-w-[1170px] mx-auto px-4">
+  <!-- Title -->
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-[32px] md:text-[40px] text-[rgb(64,64,64)] mb-4 font-semibold">
+      Frequently Asked Any Questions
+    </h1>
+    <p class="text-[rgb(112,112,112)] text-base md:text-lg">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+    </p>
+  </div>
+
+  <!-- FAQ Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-6">
+    <!-- FAQ Items -->
+    <div class="space-y-6">
+      <div class="bg-[rgb(243,243,243)] rounded-lg p-6">
+        <h2 class="text-xl text-[rgb(65,64,64)] font-semibold">
+          1. Are application fee waivers available?
+        </h2>
+        <p class="text-[rgb(112,112,112)] mt-2 text-sm md:text-base">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+        </p>
+      </div>
+
+      <div class="bg-[rgb(243,243,243)] rounded-lg p-6 flex justify-between items-center cursor-pointer">
+        <h2 class="text-xl text-[rgb(65,64,64)] font-semibold">
+          2. Are application fee waivers available?
+        </h2>
+        <span class="text-xl text-[rgb(65,64,64)]">+</span>
+      </div>
+
+      <div class="bg-[rgb(243,243,243)] rounded-lg p-6 flex justify-between items-center cursor-pointer">
+        <h2 class="text-xl text-[rgb(65,64,64)] font-semibold">
+          3. Are application fee waivers available?
+        </h2>
+        <span class="text-xl text-[rgb(65,64,64)]">+</span>
+      </div>
+
+      <div class="bg-[rgb(243,243,243)] rounded-lg p-6 flex justify-between items-center cursor-pointer">
+        <h2 class="text-xl text-[rgb(65,64,64)] font-semibold">
+          4. Are application fee waivers available?
+        </h2>
+        <span class="text-xl text-[rgb(65,64,64)]">+</span>
+      </div>
+    </div>
+
+    <!-- FAQ Image -->
+    <div class="flex justify-center items-center">
+      <img src="./images/faq.png" alt="FAQ Illustration" class="max-w-full h-auto rounded-lg" />
+    </div>
+  </div>
+</section>
+
 
         <!-- Contact US -->
-        <section class="mt-30 space-y-12">
-            <!-- Title -->
-            <div class="px-[228px]">
-                <h1 class="text-center text-[rgb(64,64,64)] text-[40px] mb-6">Contact With Us</h1>
-                <p class="text-center text-[rgb(112,112,112)]">There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some form, by injected humour.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-x-7 rounded-lg">
-                <div class="grid grid-cols-2">
-                    <div class="border-r border-b bg-[rgb(243,243,243)] border-[rgb(231,231,231)] text-center">
-                        <div class="px-15 py-16">
-                            <img class="mx-auto mb-4" src="./images/location.png" alt="location">
-                            <h3 class="text-[rgb(65,64,64)] text-xl mb-4">Address</h3>
-                            <p class="text-[rgb(112,112,112)]">A108 Adam Street,
-                                New York, NY 535022</p>
-                        </div>
+        <section class="mt-12 space-y-8 max-w-[1170px] mx-auto px-4">
+  <!-- Title -->
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-[32px] md:text-[40px] text-[rgb(64,64,64)] mb-4 font-semibold">
+      Contact With Us
+    </h1>
+    <p class="text-[rgb(112,112,112)] text-base md:text-lg">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+    </p>
+  </div>
 
-                    </div>
-                    <div class="border-r bg-[rgb(243,243,243)] border-[rgb(231,231,231)] text-center">
-                        <div class="px-15 py-16">
-                            <img class="mx-auto mb-4" src="./images/location.png" alt="location">
-                            <h3 class="text-[rgb(65,64,64)] text-xl mb-4">Address</h3>
-                            <p class="text-[rgb(112,112,112)]">A108 Adam Street,
-                                New York, NY 535022</p>
-                        </div>
-                    </div>
-                    <div class="border-r bg-[rgb(243,243,243)] border-[rgb(231,231,231)] text-center">
-                        <div class="px-15 py-16">
-                            <img class="mx-auto mb-4" src="./images/location.png" alt="location">
-                            <h3 class="text-[rgb(65,64,64)] text-xl mb-4">Address</h3>
-                            <p class="text-[rgb(112,112,112)]">A108 Adam Street,
-                                New York, NY 535022</p>
-                        </div>
-                    </div>
-                    <div class="border-t bg-[rgb(243,243,243)] border-[rgb(231,231,231)] text-center">
-                        <div class="px-15 py-16">
-                            <img class="mx-auto mb-4" src="./images/location.png" alt="location">
-                            <h3 class="text-[rgb(65,64,64)] text-xl mb-4">Address</h3>
-                            <p class="text-[rgb(112,112,112)]">A108 Adam Street,
-                                New York, NY 535022</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <form action="#">
-                        <input
-                            class="bg-[rgb(243,243,243)] rounded-lg w-full p-[23px] border-none mb-7 focus:outline-none"
-                            type="text" name="name" id="name" placeholder="Name">
-                        <input
-                            class="bg-[rgb(243,243,243)] rounded-lg w-full p-[23px] border-none mb-7 focus:outline-none"
-                            type="email" name="email" id="email" placeholder="Email">
-                        <input
-                            class="bg-[rgb(243,243,243)] rounded-lg w-full p-[23px] border-none mb-7 focus:outline-none"
-                            type="text" name="subject" id="subject" placeholder="Subject">
-                        <textarea
-                            class="bg-[rgb(243,243,243)] rounded-lg w-full p-[23px] border-none mb-7 focus:outline-none"
-                            name="message" id="message" placeholder="Enter your message" rows="5"></textarea>
-                        <button class="bg-[rgb(182,140,90)] text-white py-5 w-full rounded-lg font-semibold">Send
-                            Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-lg mt-6">
+    <!-- Contact Info Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-[rgb(243,243,243)] border border-[rgb(231,231,231)] text-center rounded-lg p-8 flex flex-col items-center">
+        <img src="./images/location.png" alt="location" class="mb-4 w-12 h-12 object-contain" />
+        <h3 class="text-[rgb(65,64,64)] text-xl mb-2 font-semibold">Address</h3>
+        <p class="text-[rgb(112,112,112)]">A108 Adam Street, New York, NY 535022</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[rgb(243,243,243)] border border-[rgb(231,231,231)] text-center rounded-lg p-8 flex flex-col items-center">
+        <img src="./images/location.png" alt="phone" class="mb-4 w-12 h-12 object-contain" />
+        <h3 class="text-[rgb(65,64,64)] text-xl mb-2 font-semibold">Phone</h3>
+        <p class="text-[rgb(112,112,112)]">+1 234 567 890</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[rgb(243,243,243)] border border-[rgb(231,231,231)] text-center rounded-lg p-8 flex flex-col items-center">
+        <img src="./images/location.png" alt="email" class="mb-4 w-12 h-12 object-contain" />
+        <h3 class="text-[rgb(65,64,64)] text-xl mb-2 font-semibold">Email</h3>
+        <p class="text-[rgb(112,112,112)]">info@example.com</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-[rgb(243,243,243)] border border-[rgb(231,231,231)] text-center rounded-lg p-8 flex flex-col items-center">
+        <img src="./images/location.png" alt="hours" class="mb-4 w-12 h-12 object-contain" />
+        <h3 class="text-[rgb(65,64,64)] text-xl mb-2 font-semibold">Working Hours</h3>
+        <p class="text-[rgb(112,112,112)]">Mon - Fri: 9AM - 5PM</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="#" class="space-y-6">
+      <input
+        class="bg-[rgb(243,243,243)] rounded-lg w-full p-5 border-none focus:outline-none"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Name"
+        required
+      />
+      <input
+        class="bg-[rgb(243,243,243)] rounded-lg w-full p-5 border-none focus:outline-none"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <input
+        class="bg-[rgb(243,243,243)] rounded-lg w-full p-5 border-none focus:outline-none"
+        type="text"
+        name="subject"
+        id="subject"
+        placeholder="Subject"
+      />
+      <textarea
+        class="bg-[rgb(243,243,243)] rounded-lg w-full p-5 border-none focus:outline-none"
+        name="message"
+        id="message"
+        placeholder="Enter your message"
+        rows="5"
+        required
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-[rgb(182,140,90)] text-white py-5 w-full rounded-lg font-semibold hover:bg-[rgb(160,120,70)] transition-colors"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
     </main>
 
-    <footer class="bg-[rgb(17,17,17)] mt-[100px]">
-        <section class="max-w-[1170px] my-0 mx-auto grid grid-cols-4 gap-10 justify-between">
-            <div class="my-12">
-                <img src="./images/logo.png" alt="">
-                <p class="text-white mt-5">There are many variations of passages of Lorem Ipsum available, but the
-                    majority have suffered
-                    alteration in some form, by injected humour.</p>
-            </div>
-            <div class="my-12 text-white">
-                <h2 class="text-2xl mb-8 text-white">Useful Links</h2>
-                <ul class="flex flex-col justify-between gap-2">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Cases</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="my-12 text-white">
-                <h2 class="text-2xl mb-8 text-white">Contact Now</h2>
-                <p class="mb-4">555 4th 5t NW, Washington
-                    DC 20530, United States</p>
-                <p class="mb-4">
-                    +88 01750 000 000 <br>
-                    +88 01750 000 000
-                </p>
-                <p class="mb-4">info@gmail.com <br>
-                    info@gmail.com</p>
-            </div>
-            <div class="my-12 text-white">
-                <h2 class="text-2xl font-semibold mb-8">Subscribe</h2>
-                <p class="mb-6 text-sm text-gray-200">
-                    Subscribe for our latest articles. We won’t send you spam.
-                </p>
+    <footer class="bg-[rgb(17,17,17)] mt-[100px] py-12">
+  <section class="max-w-[1170px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <!-- Logo and Description -->
+    <div class="mb-8 sm:mb-0">
+      <img src="./images/logo.png" alt="Logo" class="mb-5" />
+      <p class="text-white text-sm sm:text-base">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+      </p>
+    </div>
 
-                <div class="relative w-full">
-                    <input class="p-4 pr-14 w-full bg-white text-black rounded-lg border-none focus:outline-none"
-                        placeholder="Enter your email" type="email" name="subscribe" id="subscribe" />
-                    <button type="submit"
-                        class="absolute right-0 h-full rounded-md bg-[rgb(182,140,90, 0.8)]">
-                        <img src="./images/Frame.png" alt="Subscribe" class="rounded-lg w-full h-full" />
-                    </button>
-                </div>
-            </div>
+    <!-- Useful Links -->
+    <div class="text-white">
+      <h2 class="text-2xl mb-6 font-semibold">Useful Links</h2>
+      <ul class="flex flex-col gap-2 text-sm sm:text-base">
+        <li><a href="#" class="hover:text-[rgb(182,140,90)] transition-colors">Home</a></li>
+        <li><a href="#" class="hover:text-[rgb(182,140,90)] transition-colors">About</a></li>
+        <li><a href="#" class="hover:text-[rgb(182,140,90)] transition-colors">Cases</a></li>
+        <li><a href="#" class="hover:text-[rgb(182,140,90)] transition-colors">Blog</a></li>
+        <li><a href="#" class="hover:text-[rgb(182,140,90)] transition-colors">Contact Us</a></li>
+      </ul>
+    </div>
 
-        </section>
-    </footer>
+    <!-- Contact Info -->
+    <div class="text-white">
+      <h2 class="text-2xl mb-6 font-semibold">Contact Now</h2>
+      <p class="mb-4 text-sm sm:text-base">
+        555 4th St NW, Washington DC 20530, United States
+      </p>
+      <p class="mb-4 text-sm sm:text-base leading-relaxed">
+        +88 01750 000 000<br />
+        +88 01750 000 000
+      </p>
+      <p class="mb-4 text-sm sm:text-base leading-relaxed">
+        info@gmail.com<br />
+        info@gmail.com
+      </p>
+    </div>
+
+    <!-- Subscribe -->
+    <div class="text-white">
+      <h2 class="text-2xl mb-6 font-semibold">Subscribe</h2>
+      <p class="mb-6 text-sm text-gray-300">
+        Subscribe for our latest articles. We won’t send you spam.
+      </p>
+      <form class="relative w-full" action="#" method="POST">
+        <input
+          type="email"
+          name="subscribe"
+          id="subscribe"
+          placeholder="Enter your email"
+          required
+          class="w-full rounded-lg p-4 pr-16 text-black bg-white focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="absolute top-0 right-0 h-full px-4 bg-[rgba(182,140,90,0.8)] rounded-r-lg hover:bg-[rgba(182,140,90,1)] transition-colors"
+          aria-label="Subscribe"
+        >
+          <img src="./images/Frame.png" alt="Subscribe Icon" class="w-6 h-6 mx-auto" />
+        </button>
+      </form>
+    </div>
+  </section>
+</footer>
+
 </body>
 
 </html>
